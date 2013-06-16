@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D9F91E08-3F08-4716-8608-CE433B999916}</ProjectGuid>
+    <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>BigTed.Theme</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>Theme</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="monotouch" />
+    <Reference Include="MonoTouch.Dialog-1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="images\" />
+    <Folder Include="images\theme\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Compile Include="Resources.cs" />
+    <Compile Include="BTBackgroundImageSection.cs" />
+    <Compile Include="IBackgroundImageSection.cs" />
+    <Compile Include="BTDialogViewController.cs" />
+    <Compile Include="BTCustomCellSource.cs" />
+    <Compile Include="ThemeManager.cs" />
+    <Compile Include="Colors.cs" />
+    <Compile Include="ExtensionMethods.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\bear_head.png" />
+    <BundleResource Include="images\bear_head%402x.png" />
+    <BundleResource Include="images\theme\button-back.png" />
+    <BundleResource Include="images\theme\button-back%402x.png" />
+    <BundleResource Include="images\theme\button-normal.png" />
+    <BundleResource Include="images\theme\button-normal%402x.png" />
+    <BundleResource Include="images\theme\button-selected.png" />
+    <BundleResource Include="images\theme\button-selected%402x.png" />
+    <BundleResource Include="images\theme\cell-bottom-normal.png" />
+    <BundleResource Include="images\theme\cell-bottom-normal%402x.png" />
+    <BundleResource Include="images\theme\cell-bottom-selected.png" />
+    <BundleResource Include="images\theme\cell-bottom-selected%402x.png" />
+    <BundleResource Include="images\theme\cell-middle-normal.png" />
+    <BundleResource Include="images\theme\cell-middle-normal%402x.png" />
+    <BundleResource Include="images\theme\cell-middle-selected.png" />
+    <BundleResource Include="images\theme\cell-middle-selected%402x.png" />
+    <BundleResource Include="images\theme\cell-single-normal.png" />
+    <BundleResource Include="images\theme\cell-single-normal%402x.png" />
+    <BundleResource Include="images\theme\cell-single-selected.png" />
+    <BundleResource Include="images\theme\cell-single-selected%402x.png" />
+    <BundleResource Include="images\theme\cell-top-normal.png" />
+    <BundleResource Include="images\theme\cell-top-normal%402x.png" />
+    <BundleResource Include="images\theme\cell-top-selected.png" />
+    <BundleResource Include="images\theme\cell-top-selected%402x.png" />
+    <BundleResource Include="images\theme\navbar.png" />
+    <BundleResource Include="images\theme\navbar%402x.png" />
+    <BundleResource Include="images\theme\progress-background.png" />
+    <BundleResource Include="images\theme\progress-background%402x.png" />
+    <BundleResource Include="images\theme\progress-selected.png" />
+    <BundleResource Include="images\theme\progress-selected%402x.png" />
+    <BundleResource Include="images\theme\searchbar-background.png" />
+    <BundleResource Include="images\theme\searchbar-background%402x.png" />
+    <BundleResource Include="images\theme\section-header.png" />
+    <BundleResource Include="images\theme\section-header%402x.png" />
+    <BundleResource Include="images\theme\slider-background.png" />
+    <BundleResource Include="images\theme\slider-background%402x.png" />
+    <BundleResource Include="images\theme\slider-thumb.png" />
+    <BundleResource Include="images\theme\slider-thumb%402x.png" />
+    <BundleResource Include="images\theme\switch-off-background.png" />
+    <BundleResource Include="images\theme\switch-off-background%402x.png" />
+    <BundleResource Include="images\theme\switch-on-background.png" />
+    <BundleResource Include="images\theme\switch-on-background%402x.png" />
+    <BundleResource Include="images\theme\switch-thumb.png" />
+    <BundleResource Include="images\theme\switch-thumb%402x.png" />
+    <BundleResource Include="images\theme\tabbar-background.png" />
+    <BundleResource Include="images\theme\tabbar-background%402x.png" />
+    <BundleResource Include="images\theme\tabbar-selected.png" />
+    <BundleResource Include="images\theme\tabbar-selected%402x.png" />
+    <BundleResource Include="images\theme\cell-plain-normal.png" />
+    <BundleResource Include="images\theme\cell-plain-normal%402x.png" />
+    <BundleResource Include="images\theme\cell-plain-selected.png" />
+    <BundleResource Include="images\theme\cell-plain-selected%402x.png" />
+  </ItemGroup>
+</Project>
