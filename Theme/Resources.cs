@@ -35,6 +35,10 @@ namespace BigTed.Theme
 
 		public static UIImage SectionHeaderBackground = UIImage.FromFile ("images/theme/section-header.png");
 
+		public static UIImage SliderThumb = UIImage.FromFile ("images/theme/slider-thumb.png");
+		public static UIImage SliderMinBackground = UIImage.FromFile ("images/theme/slider-background.png").CreateResizableImage(new UIEdgeInsets(0,5,0,5));
+		public static UIImage SliderMaxBackground = UIImage.FromFile ("images/theme/slider-background.png").CreateResizableImage(new UIEdgeInsets(0,5,0,5));
+
 	}
 }
 

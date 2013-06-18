@@ -41,8 +41,8 @@ namespace BigTed.Theme.Runner
 				new UINavigationController(BuildDialogViewController(style: UITableViewStyle.Plain)) {
 					TabBarItem = new UITabBarItem("Second", Theme.Resources.TempIcon, 1)
 				},
-				new UINavigationController(BuildDialogViewController()) {
-					TabBarItem = new UITabBarItem("First", Theme.Resources.TempIcon, 1)
+				new UINavigationController(BuildControlsDialogViewController()) {
+					TabBarItem = new UITabBarItem("Controls", Theme.Resources.TempIcon, 1)
 				},
 				new UINavigationController(BuildDialogViewController(style: UITableViewStyle.Plain)) {
 					TabBarItem = new UITabBarItem("Second", Theme.Resources.TempIcon, 1)
@@ -66,6 +66,19 @@ namespace BigTed.Theme.Runner
 		DialogViewController BuildDialogViewController(UITableViewStyle style = UITableViewStyle.Grouped)
 		{
 			return new BTDialogViewController (style, BuildRootElement (useCustomHeader: style == UITableViewStyle.Plain), false);
+		}
+
+		DialogViewController BuildControlsDialogViewController()
+		{
+			var root = new RootElement ("Controls Dialog View Controller") {
+				new BTBackgroundImageSection("Controls")
+				{
+					new FloatElement(Resources.TempIcon, Resources.TempIcon, 0.5f)
+				}
+			};
+
+
+			return new BTDialogViewController (root, false);
 		}
 
 		RootElement BuildRootElement (int sections = 5, int elements = 5, bool useCustomHeader = false)

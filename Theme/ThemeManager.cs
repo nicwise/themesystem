@@ -1,5 +1,6 @@
 using System;
 using MonoTouch.UIKit;
+using MonoTouch.Foundation;
 
 namespace BigTed.Theme
 {
@@ -21,6 +22,13 @@ namespace BigTed.Theme
 
 			UISearchBar.Appearance.BackgroundImage = Resources.SearchBackground;
 			UISearchBar.Appearance.SetSearchFieldBackgroundImage(Resources.SearchBackground, UIControlState.Normal);
+
+			UISlider.Appearance.SetThumbImage (Resources.SliderThumb, UIControlState.Normal);
+			UISlider.Appearance.SetThumbImage (Resources.SliderThumb, UIControlState.Highlighted);
+			UISlider.Appearance.SetMinTrackImage (Resources.SliderMinBackground, UIControlState.Normal);
+			UISlider.Appearance.SetMaxTrackImage (Resources.SliderMaxBackground, UIControlState.Normal);
+
+
 
 			var navBarAttributes = new UITextAttributes {
 				TextColor = Colors.NavBarTitleColor,
