@@ -52,6 +52,7 @@
     <Compile Include="ThemeManager.cs" />
     <Compile Include="Colors.cs" />
     <Compile Include="ExtensionMethods.cs" />
+    <Compile Include="BTRootElement.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="images\bear_head.png" />
@@ -80,16 +81,10 @@
     <BundleResource Include="images\theme\cell-top-selected%402x.png" />
     <BundleResource Include="images\theme\navbar.png" />
     <BundleResource Include="images\theme\navbar%402x.png" />
-    <BundleResource Include="images\theme\progress-background.png" />
-    <BundleResource Include="images\theme\progress-background%402x.png" />
-    <BundleResource Include="images\theme\progress-selected.png" />
-    <BundleResource Include="images\theme\progress-selected%402x.png" />
     <BundleResource Include="images\theme\searchbar-background.png" />
     <BundleResource Include="images\theme\searchbar-background%402x.png" />
     <BundleResource Include="images\theme\section-header.png" />
     <BundleResource Include="images\theme\section-header%402x.png" />
-    <BundleResource Include="images\theme\slider-background.png" />
-    <BundleResource Include="images\theme\slider-background%402x.png" />
     <BundleResource Include="images\theme\slider-thumb.png" />
     <BundleResource Include="images\theme\slider-thumb%402x.png" />
     <BundleResource Include="images\theme\switch-off-background.png" />
@@ -106,5 +101,13 @@
     <BundleResource Include="images\theme\cell-plain-normal%402x.png" />
     <BundleResource Include="images\theme\cell-plain-selected.png" />
     <BundleResource Include="images\theme\cell-plain-selected%402x.png" />
+    <BundleResource Include="images\theme\slider-max-background.png" />
+    <BundleResource Include="images\theme\slider-max-background%402x.png" />
+    <BundleResource Include="images\theme\slider-min-background.png" />
+    <BundleResource Include="images\theme\slider-min-background%402x.png" />
+    <BundleResource Include="images\theme\progress-background.png" />
+    <BundleResource Include="images\theme\progress-background%402x.png" />
+    <BundleResource Include="images\theme\progress-track-background.png" />
+    <BundleResource Include="images\theme\progress-track-background%402x.png" />
   </ItemGroup>
 </Project>

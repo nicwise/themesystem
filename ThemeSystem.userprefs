@@ -1,25 +1,23 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone.6.1" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ThemeSystemRunner/AppDelegate.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Theme/BTRootElement.cs">
     <Files>
-      <File FileName="ThemeSystemRunner/AppDelegate.cs" Line="76" Column="68" />
-      <File FileName="Theme/Resources.cs" Line="40" Column="150" />
-      <File FileName="Theme/ThemeManager.cs" Line="32" Column="4" />
+      <File FileName="ThemeSystemRunner/AppDelegate.cs" Line="41" Column="6" />
+      <File FileName="Theme/Resources.cs" Line="29" Column="147" />
+      <File FileName="Theme/ThemeManager.cs" Line="13" Column="106" />
       <File FileName="Theme/IBackgroundImageSection.cs" Line="1" Column="1" />
       <File FileName="Theme/Colors.cs" Line="1" Column="1" />
       <File FileName="Theme/ExtensionMethods.cs" Line="1" Column="1" />
+      <File FileName="Theme/BTDialogViewController.cs" Line="7" Column="48" />
+      <File FileName="Theme/BTRootElement.cs" Line="39" Column="70" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
           <Node name="Theme" expanded="True">
-            <Node name="images" expanded="True">
-              <Node name="theme" expanded="True" />
-            </Node>
+            <Node name="BTRootElement.cs" selected="True" />
           </Node>
-          <Node name="ThemeSystemRunner" expanded="True">
-            <Node name="AppDelegate.cs" selected="True" />
-          </Node>
+          <Node name="ThemeSystemRunner" expanded="True" />
         </State>
       </Pad>
       <Pad Id="ClassPad">

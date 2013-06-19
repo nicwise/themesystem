@@ -24,9 +24,9 @@ namespace BigTed.Theme
 
 
 		public static UIImage NavBarHeader = UIImage.FromFile ("images/theme/navbar.png");
-		public static UIImage NavBarButton = UIImage.FromFile ("images/theme/button-normal.png");
-		public static UIImage NavBarBackButton = UIImage.FromFile ("images/theme/button-back.png");
-		public static UIImage NavBarButtonSelected = UIImage.FromFile ("images/theme/button-selected.png");
+		public static UIImage NavBarButton = UIImage.FromFile ("images/theme/button-normal.png").CreateResizableImage(new UIEdgeInsets(3,3,3,3));
+		public static UIImage NavBarBackButton = UIImage.FromFile ("images/theme/button-back.png").CreateResizableImage(new UIEdgeInsets(3,17,3,3));
+		public static UIImage NavBarButtonSelected = UIImage.FromFile ("images/theme/button-selected.png").CreateResizableImage(new UIEdgeInsets(3,3,3,3));
 
 		public static UIImage SearchBackground = UIImage.FromFile ("images/theme/searchbar-background.png");
 
@@ -36,8 +36,12 @@ namespace BigTed.Theme
 		public static UIImage SectionHeaderBackground = UIImage.FromFile ("images/theme/section-header.png");
 
 		public static UIImage SliderThumb = UIImage.FromFile ("images/theme/slider-thumb.png");
-		public static UIImage SliderMinBackground = UIImage.FromFile ("images/theme/slider-background.png").CreateResizableImage(new UIEdgeInsets(0,5,0,5));
-		public static UIImage SliderMaxBackground = UIImage.FromFile ("images/theme/slider-background.png").CreateResizableImage(new UIEdgeInsets(0,5,0,5));
+		public static UIImage SliderMinBackground = UIImage.FromFile ("images/theme/slider-min-background.png").CreateResizableImage(new UIEdgeInsets(0,5,0,5));
+		public static UIImage SliderMaxBackground = UIImage.FromFile ("images/theme/slider-max-background.png").CreateResizableImage(new UIEdgeInsets(0,5,0,5));
+
+		public static UIImage ProgressTrackBackground = UIImage.FromFile ("images/theme/progress-track-background.png").CreateResizableImage(new UIEdgeInsets(0,5,0,5));
+		public static UIImage ProgressBackground = UIImage.FromFile ("images/theme/progress-background.png").CreateResizableImage(new UIEdgeInsets(0,5,0,5));
+
 
 	}
 }

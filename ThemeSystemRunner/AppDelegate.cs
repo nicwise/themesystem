@@ -4,6 +4,7 @@ using System.Linq;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using MonoTouch.Dialog;
+using System.Drawing;
 
 namespace BigTed.Theme.Runner
 {
@@ -32,10 +33,16 @@ namespace BigTed.Theme.Runner
 			var tabs = new UITabBarController ();
 
 
+			var firstdvc = BuildDialogViewController ();
+			firstdvc.NavigationItem.RightBarButtonItems = new [] {
+				new UIBarButtonItem(UIBarButtonSystemItem.Add, delegate {}),
+				new UIBarButtonItem(UIBarButtonSystemItem.Done, delegate {})
+
+			};
 
 			var tabControllers = new UINavigationController[] {
 
-				new UINavigationController(BuildDialogViewController()) {
+				new UINavigationController(firstdvc) {
 					TabBarItem = new UITabBarItem("First", Theme.Resources.TempIcon, 1)
 				},
 				new UINavigationController(BuildDialogViewController(style: UITableViewStyle.Plain)) {
@@ -50,6 +57,7 @@ namespace BigTed.Theme.Runner
 
 
 			};
+
 
 			tabs.SetViewControllers (tabControllers, false);
 
@@ -70,10 +78,15 @@ namespace BigTed.Theme.Runner
 
 		DialogViewController BuildControlsDialogViewController()
 		{
-			var root = new RootElement ("Controls Dialog View Controller") {
+			var view = new UIView (new RectangleF (0,0, 300, 44));
+			view.BackgroundColor = UIColor.Clear;
+			view.AddSubview (new UIProgressView (new RectangleF (10, 20, 280, 18)) { Progress = 0.75f });
+
+			var root = new BTRootElement ("Controls Dialog View Controller") {
 				new BTBackgroundImageSection("Controls")
 				{
-					new FloatElement(Resources.TempIcon, Resources.TempIcon, 0.5f)
+					new FloatElement(Resources.TempIcon, Resources.TempIcon, 0.5f),
+					new UIViewElement(null, view , true)
 				}
 			};
 
@@ -83,7 +96,7 @@ namespace BigTed.Theme.Runner
 
 		RootElement BuildRootElement (int sections = 5, int elements = 5, bool useCustomHeader = false)
 		{
-			var root = new RootElement ("BigTed Themes");
+			var root = new BTRootElement ("BigTed Themes");
 
 			for (int s = 0; s < sections; s++)
 			{
@@ -95,6 +108,13 @@ namespace BigTed.Theme.Runner
 				{
 					section.Add (new StringElement ("Hello, World", delegate {}));
 				}
+
+				section.Add (new BTRootElement ("Child") {
+					new BTBackgroundImageSection("Child Section")
+					{
+						new StringElement ("Hello, World", delegate {})
+					}
+				});
 
 				root.Add (section);
 			}

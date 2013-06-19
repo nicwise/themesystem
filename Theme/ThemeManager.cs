@@ -10,7 +10,8 @@ namespace BigTed.Theme
 		{
 			UINavigationBar.Appearance.SetBackgroundImage(Resources.NavBarHeader, UIBarMetrics.Default);
 			UIBarButtonItem.Appearance.SetBackgroundImage(Resources.NavBarButton, UIControlState.Normal, UIBarMetrics.Default);
-			UIBarButtonItem.Appearance.SetBackgroundImage(Resources.NavBarButton, UIControlState.Highlighted, UIBarMetrics.Default);
+			UIBarButtonItem.Appearance.SetBackgroundImage(Resources.NavBarButtonSelected, UIControlState.Selected, UIBarMetrics.Default);
+			UIBarButtonItem.Appearance.SetBackgroundImage(Resources.NavBarButtonSelected, UIControlState.Highlighted, UIBarMetrics.Default);
 			UIBarButtonItem.Appearance.SetBackButtonBackgroundImage(Resources.NavBarBackButton, UIControlState.Normal, UIBarMetrics.Default);
 			UIBarButtonItem.Appearance.SetBackButtonBackgroundImage(Resources.NavBarBackButton, UIControlState.Highlighted, UIBarMetrics.Default);
 
@@ -36,6 +37,9 @@ namespace BigTed.Theme
 				TextShadowOffset = new UIOffset(0,-1)
 			};
 			UINavigationBar.Appearance.SetTitleTextAttributes (navBarAttributes);
+
+			UIProgressView.Appearance.TrackImage = Resources.ProgressTrackBackground;
+			UIProgressView.Appearance.ProgressImage = Resources.ProgressBackground;
 
 			/*
 			UITextAttributes cancelAttributes = new UITextAttributes();
