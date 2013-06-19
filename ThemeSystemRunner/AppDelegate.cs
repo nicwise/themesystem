@@ -86,7 +86,12 @@ namespace BigTed.Theme.Runner
 				new BTBackgroundImageSection("Controls")
 				{
 					new FloatElement(Resources.TempIcon, Resources.TempIcon, 0.5f),
-					new UIViewElement(null, view , true)
+					new UIViewElement(null, view , true),
+					new ActivityElement(),
+					//new BadgeElement("")
+					new BooleanElement("Boolean Element", true),
+					//new BooleanImageElement("BoolImage", true, //)
+
 				}
 			};
 
