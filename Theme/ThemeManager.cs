@@ -6,12 +6,19 @@ namespace BigTed.Theme
 {
 	public class ThemeManager
 	{
+
+		public static UIButton CreateNormalButton(...)
+		{
+
+		}
+
+
 		public static void ApplyTheme()
 		{
 			UINavigationBar.Appearance.SetBackgroundImage(Resources.NavBarHeader, UIBarMetrics.Default);
 			UIBarButtonItem.Appearance.SetBackgroundImage(Resources.NavBarButton, UIControlState.Normal, UIBarMetrics.Default);
-			UIBarButtonItem.Appearance.SetBackgroundImage(Resources.NavBarButtonSelected, UIControlState.Selected, UIBarMetrics.Default);
-			UIBarButtonItem.Appearance.SetBackgroundImage(Resources.NavBarButtonSelected, UIControlState.Highlighted, UIBarMetrics.Default);
+			UIBarButtonItem.Appearance.SetBackgroundImage(Resources.NavBarButtonHighlighted, UIControlState.Selected, UIBarMetrics.Default);
+			UIBarButtonItem.Appearance.SetBackgroundImage(Resources.NavBarButtonHighlighted, UIControlState.Highlighted, UIBarMetrics.Default);
 			UIBarButtonItem.Appearance.SetBackButtonBackgroundImage(Resources.NavBarBackButton, UIControlState.Normal, UIBarMetrics.Default);
 			UIBarButtonItem.Appearance.SetBackButtonBackgroundImage(Resources.NavBarBackButton, UIControlState.Highlighted, UIBarMetrics.Default);
 
@@ -41,23 +48,25 @@ namespace BigTed.Theme
 			UIProgressView.Appearance.TrackImage = Resources.ProgressTrackBackground;
 			UIProgressView.Appearance.ProgressImage = Resources.ProgressBackground;
 
+			//UIButton.Appearance.SetBackgroundImage (Resources.Button, UIControlState.Normal);
+			//UIButton.Appearance.SetBackgroundImage (Resources.ButtonHighlighted, UIControlState.Highlighted);
+
 			/*
-			UITextAttributes cancelAttributes = new UITextAttributes();
-			//cancelAttributes.TextShadowOffset = new UIOffset(0,-1);
-			cancelAttributes.TextShadowColor = UIColor.White.ColorWithAlpha(0.8f);
-			cancelAttributes.TextColor = Resources.CancelButtonEnabled;
+			 * UIImage *segmentSelected = [[UIImage imageNamed:@"segcontrol_sel.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 4, 0, 4)];
+    UIImage *segmentUnselected = [[UIImage imageNamed:@"segcontrol_uns.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 15, 0, 15)];
+    UIImage *segmentSelectedUnselected = [UIImage imageNamed:@"segcontrol_sel-uns.png"];
+    UIImage *segUnselectedSelected = [UIImage imageNamed:@"segcontrol_uns-sel.png"];
+    UIImage *segmentUnselectedUnselected = [UIImage imageNamed:@"segcontrol_uns-uns.png"];
+    
+    [[UISegmentedControl appearance] setBackgroundImage:segmentUnselected forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    [[UISegmentedControl appearance] setBackgroundImage:segmentSelected forState:UIControlStateSelected barMetrics:UIBarMetricsDefault];
+    
+    [[UISegmentedControl appearance] setDividerImage:segmentUnselectedUnselected forLeftSegmentState:UIControlStateNormal rightSegmentState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    [[UISegmentedControl appearance] setDividerImage:segmentSelectedUnselected forLeftSegmentState:UIControlStateSelected rightSegmentState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    [[UISegmentedControl appearance] setDividerImage:segUnselectedSelected forLeftSegmentState:UIControlStateNormal rightSegmentState:UIControlStateSelected barMetrics:UIBarMetricsDefault];
 
-			UIBarButtonItem.AppearanceWhenContainedIn(typeof(UISearchBar)).SetTitleTextAttributes(cancelAttributes, UIControlState.Normal);
-
-
-
-			cancelAttributes = new UITextAttributes();
-			//cancelAttributes.TextShadowOffset = new UIOffset(0, -1);
-			cancelAttributes.TextShadowColor = UIColor.White.ColorWithAlpha(0.5f);
-			cancelAttributes.TextColor = Resources.CancelButtonDisabled;
-
-			UIBarButtonItem.AppearanceWhenContainedIn(typeof(UISearchBar)).SetTitleTextAttributes(cancelAttributes, UIControlState.Disabled);
 */
+
 		}
 	}
 }

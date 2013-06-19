@@ -78,18 +78,16 @@ namespace BigTed.Theme.Runner
 
 		DialogViewController BuildControlsDialogViewController()
 		{
-			var view = new UIView (new RectangleF (0,0, 300, 44));
-			view.BackgroundColor = UIColor.Clear;
-			view.AddSubview (new UIProgressView (new RectangleF (10, 20, 280, 18)) { Progress = 0.75f });
 
 			var root = new BTRootElement ("Controls Dialog View Controller") {
 				new BTBackgroundImageSection("Controls")
 				{
 					new FloatElement(Resources.TempIcon, Resources.TempIcon, 0.5f),
-					new UIViewElement(null, view , true),
+					WrapInView(new UIProgressView (new RectangleF (10, 20, 280, 18)) { Progress = 0.75f }),
 					new ActivityElement(),
 					//new BadgeElement("")
 					new BooleanElement("Boolean Element", true),
+					//new BTBooleanElement("BTBooleanElement", true),
 					//new BooleanImageElement("BoolImage", true, //)
 
 				}
@@ -97,6 +95,16 @@ namespace BigTed.Theme.Runner
 
 
 			return new BTDialogViewController (root, false);
+		}
+
+		Element WrapInView(UIView view)
+		{
+			var container = new UIView (new RectangleF (0,0, 300, 44));
+			container.BackgroundColor = UIColor.Clear;
+			container.AddSubview (view);
+
+			return new UIViewElement(null, container , true);
+
 		}
 
 		RootElement BuildRootElement (int sections = 5, int elements = 5, bool useCustomHeader = false)
