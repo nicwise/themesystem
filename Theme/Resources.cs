@@ -26,7 +26,10 @@ namespace BigTed.Theme
 		public static UIImage NavBarHeader = UIImage.FromFile ("images/theme/navbar.png");
 		public static UIImage NavBarButton = UIImage.FromFile ("images/theme/button-normal.png").CreateResizableImage(new UIEdgeInsets(3,3,3,3));
 		public static UIImage NavBarBackButton = UIImage.FromFile ("images/theme/button-back.png").CreateResizableImage(new UIEdgeInsets(3,17,3,3));
-		public static UIImage NavBarButtonSelected = UIImage.FromFile ("images/theme/button-selected.png").CreateResizableImage(new UIEdgeInsets(3,3,3,3));
+		public static UIImage NavBarButtonHighlighted = UIImage.FromFile ("images/theme/button-selected.png").CreateResizableImage(new UIEdgeInsets(3,3,3,3));
+
+		public static UIImage Button = UIImage.FromFile ("images/theme/button-normal.png").CreateResizableImage(new UIEdgeInsets(3,3,3,3));
+		public static UIImage ButtonHighlighted = UIImage.FromFile ("images/theme/button-selected.png").CreateResizableImage(new UIEdgeInsets(3,3,3,3));
 
 		public static UIImage SearchBackground = UIImage.FromFile ("images/theme/searchbar-background.png");
 
