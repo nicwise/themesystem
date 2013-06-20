@@ -7,10 +7,12 @@ namespace BigTed.Theme
 	public class ThemeManager
 	{
 
-		public static UIButton CreateNormalButton(...)
+		/*
+		 * public static UIButton CreateNormalButton(...)
 		{
 
 		}
+		*/
 
 
 		public static void ApplyTheme()
@@ -50,6 +52,16 @@ namespace BigTed.Theme
 
 			//UIButton.Appearance.SetBackgroundImage (Resources.Button, UIControlState.Normal);
 			//UIButton.Appearance.SetBackgroundImage (Resources.ButtonHighlighted, UIControlState.Highlighted);
+
+
+			UISegmentedControl.Appearance.SetBackgroundImage (Resources.SegmentSelected, UIControlState.Selected, UIBarMetrics.Default);
+			UISegmentedControl.Appearance.SetBackgroundImage (Resources.SegmentUnselected, UIControlState.Normal, UIBarMetrics.Default);
+
+			UISegmentedControl.Appearance.SetDividerImage (Resources.SegmentJoinUnselUnsel, UIControlState.Normal, UIControlState.Normal, UIBarMetrics.Default);
+			UISegmentedControl.Appearance.SetDividerImage (Resources.SegmentJoinSelUnsel, UIControlState.Selected, UIControlState.Normal, UIBarMetrics.Default);
+			UISegmentedControl.Appearance.SetDividerImage (Resources.SegmentJoinUnselSel, UIControlState.Normal, UIControlState.Selected, UIBarMetrics.Default);
+			UISegmentedControl.Appearance.SetDividerImage (Resources.SegmentJoinSelSel, UIControlState.Selected, UIControlState.Selected, UIBarMetrics.Default);
+
 
 			/*
 			 * UIImage *segmentSelected = [[UIImage imageNamed:@"segcontrol_sel.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 4, 0, 4)];

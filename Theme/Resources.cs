@@ -45,6 +45,15 @@ namespace BigTed.Theme
 		public static UIImage ProgressTrackBackground = UIImage.FromFile ("images/theme/progress-track-background.png").CreateResizableImage(new UIEdgeInsets(0,5,0,5));
 		public static UIImage ProgressBackground = UIImage.FromFile ("images/theme/progress-background.png").CreateResizableImage(new UIEdgeInsets(0,5,0,5));
 
+		public static UIImage SegmentSelected = UIImage.FromFile ("images/theme/segment-selected.png").CreateResizableImage(new UIEdgeInsets(5,5,5,5));
+		public static UIImage SegmentUnselected = UIImage.FromFile ("images/theme/segment-unselected.png").CreateResizableImage(new UIEdgeInsets(5,5,5,5));
+
+		public static UIImage SegmentJoinSelSel = UIImage.FromFile ("images/theme/segment-sel-sel.png").CreateResizableImage(new UIEdgeInsets(2,2,2,2));
+		public static UIImage SegmentJoinUnselUnsel = UIImage.FromFile ("images/theme/segment-uns-uns.png").CreateResizableImage(new UIEdgeInsets(2,2,2,2));
+		public static UIImage SegmentJoinSelUnsel = UIImage.FromFile ("images/theme/segment-sel-uns.png").CreateResizableImage(new UIEdgeInsets(2,2,2,2));
+		public static UIImage SegmentJoinUnselSel = UIImage.FromFile ("images/theme/segment-uns-sel.png").CreateResizableImage(new UIEdgeInsets(2,2,2,2));
+
+
 
 	}
 }

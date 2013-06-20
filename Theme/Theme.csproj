@@ -109,5 +109,17 @@
     <BundleResource Include="images\theme\progress-background%402x.png" />
     <BundleResource Include="images\theme\progress-track-background.png" />
     <BundleResource Include="images\theme\progress-track-background%402x.png" />
+    <BundleResource Include="images\theme\segment-selected.png" />
+    <BundleResource Include="images\theme\segment-selected%402x.png" />
+    <BundleResource Include="images\theme\segment-sel-sel.png" />
+    <BundleResource Include="images\theme\segment-sel-sel%402x.png" />
+    <BundleResource Include="images\theme\segment-sel-uns.png" />
+    <BundleResource Include="images\theme\segment-sel-uns%402x.png" />
+    <BundleResource Include="images\theme\segment-unselected.png" />
+    <BundleResource Include="images\theme\segment-unselected%402x.png" />
+    <BundleResource Include="images\theme\segment-uns-sel.png" />
+    <BundleResource Include="images\theme\segment-uns-sel%402x.png" />
+    <BundleResource Include="images\theme\segment-uns-uns.png" />
+    <BundleResource Include="images\theme\segment-uns-uns%402x.png" />
   </ItemGroup>
 </Project>

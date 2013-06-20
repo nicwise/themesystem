@@ -32,6 +32,7 @@ namespace BigTed.Theme.Runner
 
 			var tabs = new UITabBarController ();
 
+			UIApplication.SharedApplication.StatusBarStyle = UIStatusBarStyle.BlackOpaque;
 
 			var firstdvc = BuildDialogViewController ();
 			firstdvc.NavigationItem.RightBarButtonItems = new [] {
@@ -79,6 +80,13 @@ namespace BigTed.Theme.Runner
 		DialogViewController BuildControlsDialogViewController()
 		{
 
+			var segmentControl = new UISegmentedControl (new string[] {
+				"One", "Two", "Three"
+			});
+			segmentControl.Frame = new RectangleF (5, 5, 280, 35);
+
+			segmentControl.SetEnabled (true, 1);
+
 			var root = new BTRootElement ("Controls Dialog View Controller") {
 				new BTBackgroundImageSection("Controls")
 				{
@@ -89,6 +97,8 @@ namespace BigTed.Theme.Runner
 					new BooleanElement("Boolean Element", true),
 					//new BTBooleanElement("BTBooleanElement", true),
 					//new BooleanImageElement("BoolImage", true, //)
+
+					WrapInView (segmentControl),
 
 				}
 			};
